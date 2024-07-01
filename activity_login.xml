@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/backgroundcolorlogin">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_islamway"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="251dp"
+        android:gravity="center_horizontal"
+        android:text="Islam Way"
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ed_username"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <EditText
+        android:id="@+id/ed_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="-551dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        android:hint="Write User Name"
+        android:maxLines="1"
+        android:paddingStart="21dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_islamway"
+
+        />
+
+    <EditText
+        android:id="@+id/ed_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@color/white"
+        android:hint="Write Your Password"
+        android:maxLines="1"
+        android:paddingStart="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/ed_password"
+        app:layout_constraintEnd_toEndOf="@id/ed_password"
+        app:layout_constraintStart_toStartOf="@id/ed_password"
+        android:text="Log in"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/backgroundcolorbutton"
+        app:layout_constraintVertical_bias="0.47"
+
+    />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:text="Sign Up For Islam Way"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/bt_login"
+        app:layout_constraintBottom_toTopOf="@id/tv_help"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Help Center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup"
+        app:layout_constraintBottom_toTopOf="@id/tv_signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
