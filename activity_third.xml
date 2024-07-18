@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdActivity">
+    tools:context=".ThirdActivity"
+    android:background="@color/black"
+    >
+
 
     <TextView
         android:id="@+id/tv_magazine"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:background="@color/purble"
         android:gravity="center"
         android:text="@string/magazine"
@@ -20,7 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".5"
-
         />
 
 
@@ -28,7 +30,6 @@
         android:id="@+id/tv_news"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:background="@color/purble"
         android:gravity="center"
         android:text="@string/news"
@@ -45,8 +46,7 @@
         android:orientation="horizontal"
         android:weightSum="100"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_news"
-
+        app:layout_constraintTop_toBottomOf="@id/tv_magazine"
         >
 
         <ImageView
@@ -56,9 +56,10 @@
             android:layout_weight="50"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:src="@drawable/alqods_third"
+            android:src="@drawable/ic_alqods_third"
             app:layout_constraintTop_toBottomOf="@id/tv_magazine"
-
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/almasged_alaqsa"
 
             />
 
@@ -69,26 +70,272 @@
             android:layout_weight="50"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:src="@drawable/makkah_third"
+            android:src="@drawable/ic_makkah_third"
             app:layout_constraintStart_toEndOf="@+id/iv_qods"
             app:layout_constraintTop_toBottomOf="@id/tv_news"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/makkah_almokrama"
 
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_third_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_second_row"
+
+        >
+        <!--almasjed_alnabawe-->
+        <ImageView
+        android:id="@+id/iv_m_nabawe"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_almasgedalnabwe_third"
+        app:layout_constraintTop_toBottomOf="@id/iv_qods"
+        android:accessibilityDataSensitive="yes"
+        android:contentDescription="@string/almasjed_alnabwe"
+
+         />
+        <!--islamway-->
+        <ImageView
+            android:id="@+id/iv_azziz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_azziz"
+            app:layout_constraintTop_toBottomOf="@id/iv_makkah"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/image_for_quraan"
 
             />
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="889dp"
-        android:src="@drawable/almasgedalnabwe_third"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!--fourth-->
 
-        app:layout_constraintHorizontal_bias="0.0"
+
+    <TextView
+        android:id="@+id/tv_fatawa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/fatawa"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/ll_third_row"
+        app:layout_constraintWidth_percent=".5"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_fadfada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/fadfada"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_third_row"
+        app:layout_constraintWidth_percent=".5" />
+
+    <LinearLayout
+        android:id="@+id/ll_fourth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fatawa"
+        >
+
+        <ImageView
+            android:id="@+id/iv_aladwee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_aladawee"
+            app:layout_constraintTop_toBottomOf="@id/tv_fatawa"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/mostafa_aladwee"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_yaqoob"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_yaqoob"
+            app:layout_constraintStart_toEndOf="@+id/iv_qods"
+            app:layout_constraintTop_toBottomOf="@id/tv_fadfada"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/mohamed_hussien_yaqoob"
+
+            />
+    </LinearLayout>
+
+
+
+    <!--website-->
+    <TextView
+        android:id="@+id/tv_website"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/web_site"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_fourth_row"
+        app:layout_constraintWidth_percent=".5"
+        />
+
+    <!--politics-->
+    <TextView
+        android:id="@+id/tv_politic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/politics"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_website"
+        app:layout_constraintTop_toBottomOf="@id/ll_fourth_row"
+        app:layout_constraintWidth_percent=".5" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_five_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_website"
+        >
+
+        <ImageView
+            android:id="@+id/iv_islamway"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_islamway_splash_activity"
+            app:layout_constraintTop_toBottomOf="@id/tv_website"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/image_for_web_site_islam_way"
+
+
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_aboobeda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_aboobeda"
+            app:layout_constraintStart_toEndOf="@+id/iv_alahly"
+            app:layout_constraintTop_toBottomOf="@id/tv_politic"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/abo_obeda"
+            />
+
+    </LinearLayout>
+
+    <!--Books-->
+    <TextView
+        android:id="@+id/tv_books1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/books_1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_five_row"
+        app:layout_constraintWidth_percent=".5"
+        />
+
+    <!--Books 2-->
+    <TextView
+        android:id="@+id/tv_books2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purble"
+        android:gravity="center"
+        android:text="@string/books_2"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_website"
+        app:layout_constraintTop_toBottomOf="@id/ll_five_row"
+        app:layout_constraintWidth_percent=".5" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_six_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_books1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_albokhary"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="50"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_albokhary"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/albokhary_book"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_ryad"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="50"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_ryadalsalaheen"
+            app:layout_constraintStart_toEndOf="@+id/iv_albokhary"
+            android:accessibilityDataSensitive="yes"
+            android:contentDescription="@string/ryed_al_salheen_book"
+
+            />
+
+    </LinearLayout>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

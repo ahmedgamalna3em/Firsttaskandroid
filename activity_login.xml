@@ -5,24 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundcolorlogin"
     tools:context=".LoginActivity">
-
-    <LinearLayout
-
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/backgroundcolorlogin">
-
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_islamway"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="251dp"
+        android:layout_marginTop="dp"
         android:gravity="center_horizontal"
         android:text="Islam Way"
         android:textColor="@color/white"
@@ -80,7 +70,7 @@
         android:backgroundTint="@color/backgroundcolorbutton"
         app:layout_constraintVertical_bias="0.47"
 
-    />
+        />
 
     <TextView
         android:id="@+id/tv_signup"
@@ -109,6 +99,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
